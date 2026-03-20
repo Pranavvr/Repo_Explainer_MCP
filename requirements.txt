@@ -1,0 +1,4 @@
+mcp[cli]
+PyGithub
+python-dotenv
+requests
