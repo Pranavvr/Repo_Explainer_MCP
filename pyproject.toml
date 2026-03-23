@@ -1,0 +1,30 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-repo-explainer-mcp"
+version = "0.1.0"
+description = "MCP server that gives AI assistants live access to any GitHub repo"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]",
+    "PyGithub",
+    "python-dotenv",
+    "requests",
+]
+
+[project.urls]
+Homepage = "https://github.com/Pranavvr/Repo_Explainer_MCP"
+Repository = "https://github.com/Pranavvr/Repo_Explainer_MCP"
+
+
+[project.scripts]
+github-repo-explainer-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server", "github_client"]
+
